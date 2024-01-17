@@ -6,7 +6,6 @@ with open("input.txt", "r") as file:
         hand, bid = row.split(" ")
         bid = int(bid)
         cards.append((hand,bid))
-#print(cards)
 
 
 #Five - 7
@@ -20,7 +19,6 @@ def identifyHand(hand):
     countMap = {}
     for char in hand:
         countMap[char] = 1 + countMap.get(char, 0)
-    #print(countMap)
     if len(countMap) == 1:
         return 7
     elif len(countMap) == 2:

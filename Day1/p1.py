@@ -1,5 +1,4 @@
 
-
 with open("input.txt", "r") as file:
     res = 0
     for row in file:

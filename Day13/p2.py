@@ -9,8 +9,7 @@ def horizontal(puzzle):
         minRows = min(len(puzzle)-b, b)
         for i in range(minRows):
                 smudges += sum([not (x==y) for x,y in zip(puzzle[b-1-i], puzzle[b+i])])
-                # if not all(x==y for x,y in zip(puzzle[b-1-i], puzzle[b+i])):
-                #     correct = False
+
         if smudges == 1:
             return b
     
@@ -21,7 +20,6 @@ with open("input.txt", "r") as file:
     data = file.read().strip().split("\n\n")
 data = [i.split("\n") for i in data]
 puzzles = [[list(p) for p in y] for y in data]
-#print(len(puzzles))
 
 res = 0
 for i in range(len(puzzles)):

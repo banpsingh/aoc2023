@@ -59,13 +59,11 @@ def compare(item1, item2):
     val1 = identifyHand(hand1)
     val2 = identifyHand(hand2)
     if val1 != val2:
-        # return -1 if val1 < val2 else 1
         return val1 - val2
     else:
         i = 0
         while hand1[i] == hand2[i]:
             i += 1
-        # return -1 if conversion[hand1[i]] < conversion[hand2[i]] else 1
         return conversion[hand1[i]] - conversion[hand2[i]]
     
     return 0 

@@ -10,9 +10,6 @@ for row in data:
     left, right = left[1:], right[:-1]
     network[node] = (left, right)
 
-#print(network)
-
-
 steps = 0
 instrucCounter = 0
 curr = 'AAA'
